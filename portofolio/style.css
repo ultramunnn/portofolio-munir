@@ -1,0 +1,325 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+  --main-color: #fff8e1; /* Krem lembut untuk latar belakang */
+  --primary-color: #ffcc00; /* Kuning cerah */
+  --secondary-color: #00a8e8; /* Biru cerah */
+  --accent-color: #f72585; /* Pink cerah */
+  --background-color: #2d2d2d; /* Hitam keabu-abuan */
+  --text-color: #ffffff; /* Putih */
+  --highlight-color: #06d6a0; /* Hijau mint untuk detail */
+  --font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+  background-color: var(--main-color);
+  font-family: var(--font-family);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Container */
+.container-box {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  border: 5px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px var(--secondary-color),
+    -5px -5px 0px var(--accent-color);
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px var(--accent-color);
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--background-color);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--background-color);
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: var(--text-color);
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 20px;
+}
+
+/* Profile Section */
+.container-profile {
+  display: flex;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px var(--secondary-color);
+  
+  
+  
+}
+.profile-nama {
+  margin-top: 5rem;
+  text-align: center;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.profile-nama h1 {
+  font-size: 36px;
+  color: var(--background-color);
+  margin-bottom: 10px;
+}
+
+.profile-nama p {
+  font-size: 18px;
+  color: var(--accent-color);
+}
+
+/* Foto Portofolio */
+.foto-portofolio {
+  margin: 3rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-portofolio img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--highlight-color);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.foto-portofolio img:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 0px var(--secondary-color),
+    -5px -5px 0px var(--accent-color);
+}
+
+/* Bagian About */
+.about-section {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  padding: 40px 20px;
+  margin-top: 3rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 0px var(--accent-color),
+    -5px -5px 0px var(--primary-color);
+}
+
+.about-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.about-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Bagian Skills */
+.skills {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 40px 20px;
+  margin-top: 3rem;
+  border-radius: 10px;
+  text-align: center;
+
+  box-shadow: 5px 5px 0px var(--secondary-color),
+    -5px -5px 0px var(--accent-color);
+}
+
+.skills h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.skills ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.skills ul li img{
+    width: 110px;
+    height: 110px;
+}
+.skills ul li img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+ 
+
+
+/* Bagian Project */
+.project {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  padding: 40px 20px;
+  margin-top: 3rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 0px var(--accent-color);
+}
+
+.project h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.project-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-item {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  padding: 40px 20px;
+  margin-top: 3rem;
+  border-radius: 10px;
+  text-align: center;
+  border: #ffffff 2px solid;
+  box-shadow: 5px 5px 0px var(--accent-color),
+    -5px -5px 0px var(--primary-color);
+}
+
+/* Bagian contact */
+.contact {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 40px 20px;
+  margin-top: 3rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 0px var(--secondary-color),
+    -5px -5px 0px var(--accent-color);
+}
+.contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.contact p {    
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-decoration: none;
+  
+}
+
+.contact a   {    
+  font-size: 16px;
+  color: #f72585;
+  text-decoration: none;
+  
+}
+
+/* Bagian Footer */
+
+footer {
+    margin-top: 30px;
+}
+
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul li a {
+    display: none;
+    background-color: #06d6a0;
+  }
+
+  main .container-profile {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .foto-portofolio {
+    margin-bottom: 2rem;
+  }
+
+  .profile h1 {
+    font-size: 28px;
+  }
+
+  .profile p {
+    font-size: 16px;
+  }
+
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .project-item {
+    width: 80%;
+    height: 80%;
+    margin-bottom: 1rem;
+  }
+
+  .skills ul {
+    gap: 0.5rem;
+    margin-bottom: 10px;
+  }
+
+  .skills ul li img {
+    width: 90px;
+    height: 90px;
+  }
+}
