@@ -112,22 +112,20 @@ nav ul li a:hover {
 /* Toggle to display the menu */
 .menu-toggle.active .bar:nth-child(1) {
   transform: rotate(45deg);
-  transition: all 0.3s ease-in-out; 
+  transition: all 0.3s ease-in-out;
   position: absolute;
 }
 
 .menu-toggle.active .bar:nth-child(2) {
-  transition: all 0.3s ease-in-out; 
+  transition: all 0.3s ease-in-out;
   opacity: 0;
 }
 
 .menu-toggle.active .bar:nth-child(3) {
   transform: rotate(-45deg);
-  transition: all 0.3s ease-in-out ;
+  transition: all 0.3s ease-in-out;
   position: absolute;
 }
-
-
 
 /* Main */
 main {
@@ -391,7 +389,7 @@ footer {
     font-size: 16px;
   }
 
-  .about-section p{
+  .about-section p {
     font-size: 13px;
   }
 
