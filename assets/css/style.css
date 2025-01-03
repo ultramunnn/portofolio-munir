@@ -74,6 +74,61 @@ nav ul li a:hover {
   color: var(--text-color);
 }
 
+/* Menu Toggle (Hamburger) Styles */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--background-color);
+  transition: ease-in-out 0.3s;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--background-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle .close {
+  display: none;
+  font-size: 30px;
+  color: var(--background-color);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Toggle to display the menu */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out; 
+  position: absolute;
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  transition: all 0.3s ease-in-out; 
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  transition: all 0.3s ease-in-out ;
+  position: absolute;
+}
+
+
+
 /* Main */
 main {
   display: flex;
@@ -84,15 +139,16 @@ main {
   gap: 20px;
 }
 
+main.nav-active {
+  margin-top: 150px; /* Menyesuaikan dengan tinggi menu navigasi */
+}
+
 /* Profile Section */
 .container-profile {
   display: flex;
   background-color: var(--primary-color);
   border-radius: 10px;
   box-shadow: 5px 5px 0px var(--secondary-color);
-  
-  
-  
 }
 .profile-nama {
   margin-top: 5rem;
@@ -187,16 +243,14 @@ main {
   margin-bottom: 15px;
 }
 
-.skills ul li img{
-    width: 110px;
-    height: 110px;
+.skills ul li img {
+  width: 110px;
+  height: 110px;
 }
 .skills ul li img:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
- 
-
 
 /* Bagian Project */
 .project {
@@ -250,41 +304,77 @@ main {
   color: var(--text-color);
 }
 
-.contact p {    
+.contact p {
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 15px;
   text-decoration: none;
-  
 }
 
-.contact a   {    
+.contact a {
   font-size: 16px;
   color: #f72585;
   text-decoration: none;
-  
 }
 
 /* Bagian Footer */
 
 footer {
-    margin-top: 30px;
+  margin-top: 30px;
 }
-
-
 
 /* Responsiveness */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
+    position: relative;
+  }
+  nav .nav-links {
+    display: none;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 100;
   }
 
-  nav ul li a {
+  nav .nav-links.active {
+    display: flex;
+    margin-top: 1.3rem;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-toggle {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-toggle.active .close {
     display: none;
-    background-color: #06d6a0;
+  }
+
+  main {
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Aturan untuk main saat kelas 'active' diterapkan */
+  main.active {
+    margin-top: 80px;
+    transition: all 0.3s ease-in-out;
   }
 
   main .container-profile {
+    padding: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
     flex-direction: column;
     gap: 10px;
   }
